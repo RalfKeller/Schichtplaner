@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './MainComponent/main.component'
 import { AuthGuard } from './AuthGuard';
 import { AuthenticationService } from './Services/authentication.service';
+import { MainRoutingModule } from './Routes/main-routing.module';
 
 import { ButtonsModule } from 'ng2-bootstrap/buttons';
 
@@ -18,8 +19,6 @@ import { SidebarModule } from 'ng-sidebar';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: '', component: MainComponent, canActivate: [AuthGuard]},
-  {path: 'register', component:RegisterComponent}
 ];
 
 @NgModule({
@@ -27,7 +26,7 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     MainComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,8 +34,10 @@ const routes: Routes = [
     HttpModule,
     RouterModule,
     RouterModule.forRoot(routes),
+    RouterModule.forChild(routes),
     ButtonsModule.forRoot(),
     SidebarModule,
+    MainRoutingModule
   ],
   providers: [AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]

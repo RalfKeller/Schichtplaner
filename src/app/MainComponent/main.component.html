@@ -1,8 +1,25 @@
+<div class="sidenav" style="width:10%;">
+    <div class="sidebar-element">
+        <a [routerLink]="['/register']" class="text-center align-center">
+            <img class="text-center" src="src/assets/list-1.svg" alt="">
+            <br> Test
+        </a>
+    </div>
+    <div class="sidebar-element">
+        <a [routerLink]="['/login']" class="text-center align-center">
+            <img class="text-center" src="src/assets/list-1.svg" alt="">
+            <br> Test
+        </a>
+    </div>  
+</div>
 
-<h1>Main component</h1>
-Test
+<div class="navbar">
+    <div class="navbar-element">
+        <h2>LOGO</h2>
+    </div>
+</div>
 
-<nav class="w3-sidenav w3-black">
-    <h1>Test2</h1>
-</nav>
-<router-outlet name="main"></router-outlet>
+<div style="margin-left:10%;padding-top:10%;padding-left: 10px;position: relative">
+    <h1>Main component</h1>
+    <router-outlet></router-outlet>
+</div>

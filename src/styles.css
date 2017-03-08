@@ -12,6 +12,90 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    background-color: #4D4D4D;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 10%;
+
+    border-top: 1px solid #000
+}
+
+.sidebar-element{
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar{
+  background-color: #A4A5A5;
+  height: 10%;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  border-bottom: 1px solid #000;
+
+  margin: 0;
+  padding: 0;
+
+  display: block;
+
+  overflow-y: hidden
+}
+
+.navbar-element {
+    display: block;
+
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom:0%;
+    padding-top: 0%;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -4181,16 +4265,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-.navbar {
-  position: relative;
-  min-height: 60px;
-  margin-bottom: 21px;
-  border: 1px solid transparent;
-}
+
 @media (min-width: 768px) {
-  .navbar {
-    border-radius: 4px;
-  }
+
 }
 @media (min-width: 768px) {
   .navbar-header {
@@ -6770,7 +6847,7 @@ button.close {
   }
 }
 .navbar {
-  border-width: 0;
+  border-width:0;
 }
 .navbar-default .badge {
   background-color: #fff;
