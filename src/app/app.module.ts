@@ -8,6 +8,7 @@ import {  LoginComponent } from './Login/login.component';
 import { RegisterComponent } from './Register/register.component';
 import { AppComponent } from './app.component';
 import { MainComponent } from './MainComponent/main.component'
+import { PlanerOverviewComponent } from './PlanerOverview/planerOverview.component';
 import { AuthGuard } from './AuthGuard';
 import { AuthenticationService } from './Services/authentication.service';
 import { MainRoutingModule } from './Routes/main-routing.module';
@@ -27,6 +28,7 @@ const routes: Routes = [
     LoginComponent,
     MainComponent,
     RegisterComponent,
+    PlanerOverviewComponent
   ],
   imports: [
     BrowserModule,

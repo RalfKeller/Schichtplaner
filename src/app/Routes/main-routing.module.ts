@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MainComponent } from './../MainComponent/main.component';
 import { RegisterComponent} from './../Register/register.component';
+import { PlanerOverviewComponent } from './../PlanerOverview/planerOverview.component';
 
 import { AuthGuard } from './../AuthGuard';
 
@@ -15,7 +16,12 @@ const mainRoutes: Routes = [
       {
         path: 'register',
         component: RegisterComponent,
-      }
+      },
+
+      {
+        path:'planeroverview',
+        component:PlanerOverviewComponent,
+      },
     ]
   }
 ];
