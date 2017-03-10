@@ -17,7 +17,6 @@ export class ShiftComponent {
     constructor() { }
 
     onDrag(){ 
-        console.log("onDragged")
         this.onDragged.emit(this.data);
     }
 

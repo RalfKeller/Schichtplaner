@@ -17,15 +17,12 @@ export class ShifContainerComponent {
     }
 
     dropOn(event){
-
-        console.log("dropOn")
         let newShift: Shift = event.dragData;
         
         this.shifts.push(newShift);
     }
 
     onDraggedShift(draggedShift: Shift){
-        console.log("onDraggedShift")
         this.shifts.splice(this.shifts.indexOf(draggedShift), 1);
     }
 }
