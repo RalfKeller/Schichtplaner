@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output} from '@angular/core';
 
 import { Shift } from './../../Domain/Shift';
 
@@ -10,6 +10,7 @@ import { Shift } from './../../Domain/Shift';
 export class ShifContainerComponent {
 
     @Input()
+    @Output()
     shifts:Shift[];
 
     constructor() { 

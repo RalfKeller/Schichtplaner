@@ -10,11 +10,17 @@ export class PlanerOverviewComponent  {
     
     tShift:Shift;
 
+    shiftsA:Shift[];
+    shiftsB:Shift[];
+
     constructor() {
         this.tShift = {
             color:"Blue",
             name: "Test"
         }
+
+        this.shiftsA=[this.tShift];
+        this.shiftsB = [];
      }
 
 }
