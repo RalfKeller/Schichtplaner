@@ -1,0 +1,8 @@
+<div dnd-droppable (onDropSuccess)="dropOn($event)">
+
+    <div *ngIf="shifts.length == 0">Drop here</div>
+    <div *ngFor="let shift of shifts">
+        <shift [data]="shift" (onDragged)="onDraggedShift()"></shift>
+    </div>
+
+</div>

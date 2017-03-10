@@ -1,17 +1,24 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Shift } from './../../Domain/Shift';
 
 @Component({
-    moduleId: module.id,
     selector: 'shift',
     templateUrl: 'shift.component.html'
 })
 export class ShiftComponent {
     
     @Input()
-    shift:Shift;
-    
+    data:Shift;
+
+    @Output()
+    onDragged = new EventEmitter<Shift>();
+
     constructor() { }
+
+    onDrag(){ 
+        console.log("onDragged")
+        this.onDragged.emit(this.data);
+    }
 
 }

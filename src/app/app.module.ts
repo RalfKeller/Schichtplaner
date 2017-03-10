@@ -11,6 +11,9 @@ import { MainComponent } from './MainComponent/main.component'
 import { PlanerOverviewComponent } from './PlanerOverview/planerOverview.component';
 import { DashboardComponent } from './Dashboard/dashboard.component';
 
+import { ShiftComponent } from './PlanerOverview/ShiftComponent/shift.component';
+import { ShifContainerComponent } from './PlanerOverview/ShiftContainerComponent/shiftcontainer.component';
+
 import { AuthGuard } from './AuthGuard';
 import { AuthenticationService } from './Services/authentication.service';
 import { MainRoutingModule } from './Routes/main-routing.module';
@@ -35,7 +38,9 @@ const routes: Routes = [
     MainComponent,
     RegisterComponent,
     PlanerOverviewComponent,
-    DashboardComponent
+    DashboardComponent,
+    ShiftComponent,
+    ShifContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     ButtonsModule.forRoot(),
     DropdownModule.forRoot(),
+    DndModule.forRoot(),
     SidebarModule,
     MainRoutingModule
   ],

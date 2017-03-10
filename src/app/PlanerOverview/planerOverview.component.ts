@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ShiftComponent } from './ShiftComponent/shift.component';
+import { Shift } from './../Domain/Shift';
 @Component({
     moduleId: module.id,
     selector: 'planerOverview',
@@ -7,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanerOverviewComponent  {
     
-    constructor() { }
+    tShift:Shift;
+
+    constructor() {
+        this.tShift = {
+            color:"Blue",
+            name: "Test"
+        }
+     }
 
 }
