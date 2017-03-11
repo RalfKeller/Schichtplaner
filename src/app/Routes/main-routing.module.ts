@@ -5,6 +5,8 @@ import { MainComponent } from './../MainComponent/main.component';
 import { RegisterComponent} from './../Register/register.component';
 import { PlanerOverviewComponent } from './../PlanerOverview/planerOverview.component';
 import { DashboardComponent } from './../Dashboard/dashboard.component';
+import { EmployeesComponent } from './../EmployeesComponent/employees.component';
+import { ShiftsCreationComponent } from './../ShiftsCreation/shiftscreation.component';
 
 import { AuthGuard } from './../AuthGuard';
 
@@ -27,6 +29,14 @@ const mainRoutes: Routes = [
         path: 'dashboard',
         component:DashboardComponent,
         
+      },
+      {
+        path:'employees',
+        component:EmployeesComponent
+      },
+      {
+        path:'shifts',
+        component:ShiftsCreationComponent
       },
       {
         path:'',

@@ -1,0 +1,21 @@
+<h1>Employees</h1>
+
+<button type="button" class="btn btn-primary" (click)="modal.start()">Create New</button>
+
+<newEmployeeModal #modal></newEmployeeModal>
+
+<table class="table table-striped">
+    <thead class="thead-inverse">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Capacity</th>
+        <th>Current Workload</th>
+    </thead>
+
+    <tr *ngFor="let employee of data">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.maxCapacity}}</td>
+        <td>{{employee.currentCapacity}}</td>
+    </tr>
+</table>

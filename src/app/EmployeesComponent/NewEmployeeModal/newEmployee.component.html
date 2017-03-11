@@ -1,0 +1,71 @@
+<modal #modal (onClose)="onModalClose()">
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">Create New Employee!</h4>
+    </modal-header>
+    <modal-body>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input #inp name="nameInput" id="name" type="text" class="form-control" [(ngModel)]="name">
+            </div>
+            <div class="form-group">
+                <label for="name">Capacity:</label>
+                <input id="name" type="text" class="form-control">
+            </div>
+
+            <div class="form-check">
+                <label>Availible on:</label>
+                <div class="">
+                    <label class="custom-control custom-checkbox">
+                        <input name="checkMonday" type="checkbox" class="custom-control-input" [(ngModel)]="availibleOn[0]">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Mondays</span>
+                    </label>
+                    <br>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" [(ngModel)]="availibleOn[1]" name="checkTuesday">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Tuesdays</span>
+                    </label>
+                    <br>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" [(ngModel)]="availibleOn[2]" name="checkWednesdays">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Wednesdays</span>
+                    </label>
+                    <br>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" [(ngModel)]="availibleOn[3]" name="checkThursdays">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Thursdays</span>
+                    </label>
+                    <br>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" [(ngModel)]="availibleOn[4]" name="checkFridays">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Fridays</span>
+                    </label>
+                    <br>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" [(ngModel)]="availibleOn[5]" name="checkSaturdays">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Saturdays</span>
+                    </label>
+                    <br>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" [(ngModel)]="availibleOn[6]" name="checkSundays">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Sundays</span>
+                    </label>
+
+
+                </div>
+                    
+                    <button type="button" class="btn btn-success" (click)="toggleAll(true)">Check All</button>
+                    <button type="button" class="btn btn-danger" (click)="toggleAll(false)">Uncheck All</button>
+            </div>
+
+        </form>
+    </modal-body>
+    <modal-footer [show-default-buttons]="true"></modal-footer>
+</modal>
