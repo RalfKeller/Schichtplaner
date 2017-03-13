@@ -13,6 +13,7 @@ import { DashboardComponent } from './Dashboard/dashboard.component';
 import { EmployeesComponent } from './EmployeesComponent/employees.component';
 import { NewEmployeeComponent } from './EmployeesComponent/NewEmployeeModal/newEmployee.component';
 import { ShiftsCreationComponent } from './ShiftsCreation/shiftscreation.component';
+import { NewShiftComponent } from './ShiftsCreation/NewShiftModal/newShift.component';
 
 import { ShiftComponent } from './PlanerOverview/ShiftComponent/shift.component';
 import { ShifContainerComponent } from './PlanerOverview/ShiftContainerComponent/shiftcontainer.component';
@@ -48,7 +49,8 @@ const routes: Routes = [
     NewEmployeeComponent,
     ShiftComponent,
     ShifContainerComponent,
-    ShiftsCreationComponent
+    ShiftsCreationComponent,
+    NewShiftComponent,
   ],
   imports: [
     BrowserModule,

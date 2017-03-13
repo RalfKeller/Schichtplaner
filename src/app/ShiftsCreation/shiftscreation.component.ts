@@ -1,10 +1,19 @@
+import { Shift } from '../Domain/Shift';
 import { Component } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'shiftscreation',
     templateUrl: 'shiftscreation.component.html'
 })
 export class ShiftsCreationComponent {
-    constructor() { }
+
+    data: Shift[][];
+
+    testShift:Shift;
+
+
+    constructor() {
+        this.data = [[], [], [], [], [], [], []];
+        this.testShift = {color: 'Blue', name: 'Morning Shift'};
+    }
 }

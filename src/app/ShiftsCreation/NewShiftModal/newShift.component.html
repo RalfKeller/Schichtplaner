@@ -1,0 +1,24 @@
+<modal #modal (onClose)="onModalClose()">
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">Create New Shift!</h4>
+    </modal-header>
+    <modal-body>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input #inp name="nameInput" id="name" type="text" class="form-control" [(ngModel)]="name">
+            </div>
+            <div class="form-group">
+                <label for="name">Duration:</label>
+                <input id="name" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Required Employees:</label>
+                <input id="name" type="number" class="form-control">
+            </div>
+
+        </form>
+    </modal-body>
+    <modal-footer [show-default-buttons]="true"></modal-footer>
+</modal>
