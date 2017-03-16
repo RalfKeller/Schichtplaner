@@ -1,21 +1,31 @@
-<h1>Employees</h1>
+<div class="container-fluid">
+    <div class="row" style="padding-bottom:20px">
+        <h1>Employees</h1>
 
-<button type="button" class="btn btn-primary" (click)="modal.start()">Create New</button>
+        <button type="button" class="btn btn-primary" (click)="modal.start()">Create New</button>
+        <newEmployeeModal #modal></newEmployeeModal>
 
-<newEmployeeModal #modal></newEmployeeModal>
+    </div>
 
-<table class="table table-striped">
-    <thead class="thead-inverse">
-        <th>ID</th>
-        <th>Name</th>
-        <th>Capacity</th>
-        <th>Current Workload</th>
-    </thead>
+    <div class="row">
+        <div class="panel panel-default">
+            <table class="table table-striped">
+                <thead class="thead-inverse">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Capacity</th>
+                    <th>Current Workload</th>
+                    <th>Actions</th>
+                </thead>
 
-    <tr *ngFor="let employee of data">
-        <td>{{employee.id}}</td>
-        <td>{{employee.name}}</td>
-        <td>{{employee.maxCapacity}}</td>
-        <td>{{employee.currentCapacity}}</td>
-    </tr>
-</table>
+                <tr *ngFor="let employee of data">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.maxCapacity}}</td>
+                    <td>{{employee.currentCapacity}}</td>
+                    <td><button type="button" class="btn btn-sm btn-primary">Edit</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
