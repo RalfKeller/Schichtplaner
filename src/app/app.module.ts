@@ -24,13 +24,14 @@ import { MainRoutingModule } from './Routes/main-routing.module';
 import { EmployeeCommunicatorService } from './Services/Communicators/employeeCommunicator.service';
 
 import { ButtonsModule } from 'ng2-bootstrap/buttons';
-import { DropdownModule } from 'ng2-bootstrap/dropdown'
+import { DropdownModule } from 'ng2-bootstrap/dropdown';
 
 import { SidebarModule } from 'ng-sidebar';
 
 import {DndModule} from 'ng2-dnd';
 
-import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
+import { ModalModule } from 'ng2-bs4-modal/ng2-bs4-modal';
+
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -64,7 +65,7 @@ const routes: Routes = [
     DndModule.forRoot(),
     SidebarModule,
     MainRoutingModule,
-    Ng2Bs3ModalModule
+    ModalModule,
   ],
   providers: [AuthGuard, AuthenticationService, EmployeeCommunicatorService],
   bootstrap: [AppComponent]

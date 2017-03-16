@@ -1,7 +1,7 @@
 import { Employee } from '../../Domain/Employee';
 import { Component, ViewChild } from '@angular/core';
 
-import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
+import { ModalComponent } from 'ng2-bs4-modal/ng2-bs4-modal';
 @Component({
     moduleId: module.id,
     selector: 'newEmployeeModal',

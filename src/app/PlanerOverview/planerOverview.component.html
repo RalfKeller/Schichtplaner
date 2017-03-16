@@ -1,81 +1,91 @@
 <div class="container-fluid">
-    <div class="row" style="padding-bottom: 20px">
-        <h1>Planer Overview</h1>
-
-        <h2>2017, Woche: 1</h2>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-primary">
+    <div class="row">
+        <div class="col">
+            <h1>Planer Overview</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>2017, Woche: 1</h2>
+        </div>
+    </div>
+    <div class="col">
+        <div class="row" style="padding-bottom: 20px">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary">
             Letzte
         </button>
 
-            <button type="button" class="btn btn-primary">Heute</button>
-            <button type="button" class="btn btn-primary">Nächste</button>
+                <button type="button" class="btn btn-primary">Heute</button>
+                <button type="button" class="btn btn-primary">Nächste</button>
 
+            </div>
         </div>
-
     </div>
     <div class="row">
-        <div class="panel panel-default">
-            <table class="table table-striped table-boredered">
-                <thead class="thead-default">
-                    <tr>
-                        <th>Employee</th>
-                        <th>Montag</th>
-                        <th>Dienstag</th>
-                        <th>Mittwoch</th>
-                        <th>Donnerstag</th>
-                        <th>Freitag</th>
-                        <th>Samstag</th>
-                        <th>Sonntag</th>
-                    </tr>
-                </thead>
+        <div class="col">
+            <div class="panel panel-default">
+                <table class="table table-striped">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>Employee</th>
+                            <th>Montag</th>
+                            <th>Dienstag</th>
+                            <th>Mittwoch</th>
+                            <th>Donnerstag</th>
+                            <th>Freitag</th>
+                            <th>Samstag</th>
+                            <th>Sonntag</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr>
-                        <td>
-                            <shiftcontainer [shifts]="shiftsA"></shiftcontainer>
-                        </td>
-                        <td>{{shiftsA.length}}</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <shiftcontainer [shifts]="shiftsB"></shiftcontainer>
-                        </td>
-                        <td>{{shiftsB.length}}</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                    </tr>
-                    <tr>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                    </tr>
-                    <tr>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                        <td>Not assigned</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <shiftcontainer [shifts]="shiftsA"></shiftcontainer>
+                            </td>
+                            <td>{{shiftsA.length}}</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <shiftcontainer [shifts]="shiftsB"></shiftcontainer>
+                            </td>
+                            <td>{{shiftsB.length}}</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                        </tr>
+                        <tr>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                        </tr>
+                        <tr>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
