@@ -10,12 +10,9 @@ import { EmployeeCommunicatorService } from './../Services/Communicators/employe
 })
 export class EmployeesComponent  {
 
-    data:Employee[];
+
+    data: Employee[];
     constructor(private employeeCommunicator:EmployeeCommunicatorService) { 
         this.data = employeeCommunicator.getEmployees();
-    }
-
-    createNew(){
-        
     }
 }

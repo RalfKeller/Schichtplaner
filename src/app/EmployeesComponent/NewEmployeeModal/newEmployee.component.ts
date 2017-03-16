@@ -1,3 +1,4 @@
+import { Employee } from '../../Domain/Employee';
 import { Component, ViewChild } from '@angular/core';
 
 import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
@@ -7,30 +8,34 @@ import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
     templateUrl: 'newEmployee.component.html'
 })
 export class NewEmployeeComponent {
-    
+
     @ViewChild('modal')
-    modal:ModalComponent;
+    modal: ModalComponent;
 
-    name:string;
-    capacity:string;
+    name: string;
+    capacity: string;
 
-    availibleOn:boolean[];
+    availibleOn: boolean[];
 
-    public start(){
+    public start() {
         this.constructor();
-        this.modal.open();    
+        this.modal.open();
     }
 
-    onModalClose(){
+    editEmployee(employee: Employee) {
+        this.name = employee.name;
+        this.modal.open();
+    }
+    onModalClose() {
     }
 
 
-    toggleAll(select:boolean){
+    toggleAll(select: boolean) {
         this.availibleOn = [select, select, select, select, select, select, select];
     }
-    
+
     constructor() {
-        this.name = "Test";
+        this.name = 'Test';
         this.availibleOn = [false, false, false, false, false, false, false];
      }
 }

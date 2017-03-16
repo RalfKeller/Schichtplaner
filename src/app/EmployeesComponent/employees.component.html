@@ -11,11 +11,13 @@
         <div class="panel panel-default">
             <table class="table table-striped">
                 <thead class="thead-inverse">
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Capacity</th>
-                    <th>Current Workload</th>
-                    <th>Actions</th>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Capacity</th>
+                        <th>Current Workload</th>
+                        <th>Actions</th>
+                    </tr>
                 </thead>
 
                 <tr *ngFor="let employee of data">
@@ -23,7 +25,7 @@
                     <td>{{employee.name}}</td>
                     <td>{{employee.maxCapacity}}</td>
                     <td>{{employee.currentCapacity}}</td>
-                    <td><button type="button" class="btn btn-sm btn-primary">Edit</button></td>
+                    <td><button type="button" class="btn btn-sm btn-primary" (click)="modal.editEmployee(employee)">Edit</button></td>
                 </tr>
             </table>
         </div>
