@@ -19,6 +19,11 @@
     padding-top: 50px; /* For header */
 }
 
+.shiftcomp {
+  border: 2px solid wheat;
+  margin:3px;
+}
+
 .dnd-drag-start {
     -moz-transform:scale(0.8);
     -webkit-transform:scale(0.8);

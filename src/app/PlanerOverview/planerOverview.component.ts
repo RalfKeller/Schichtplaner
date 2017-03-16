@@ -7,19 +7,19 @@ import { Shift } from './../Domain/Shift';
     templateUrl: 'planerOverview.component.html'
 })
 export class PlanerOverviewComponent  {
-    
-    tShift:Shift;
 
-    shiftsA:Shift[];
-    shiftsB:Shift[];
+    tShift: Shift;
+
+    shiftsA: Shift[];
+    shiftsB: Shift[];
 
     constructor() {
         this.tShift = {
-            color:"Blue",
-            name: "Test"
+            color: 'Blue',
+            name: 'Test'
         }
 
-        this.shiftsA=[this.tShift];
+        this.shiftsA= [this.tShift];
         this.shiftsB = [];
      }
 
