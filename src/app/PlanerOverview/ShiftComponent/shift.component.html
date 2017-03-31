@@ -1,4 +1,4 @@
-<div dnd-draggable [dragEnabled]="true" [dragData]="data" (onDragSuccess)="onDrag()">
+<div dnd-draggable [dragEnabled]="true" [dragData]="data" (onDragSuccess)="onDrag()" [dropZones]="dropZones">
     <div class="shiftcomp text-center" [ngStyle]="{backgroundColor: data.color}">
         {{data.name}}
     </div>

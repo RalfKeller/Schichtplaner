@@ -13,6 +13,9 @@ export class ShifContainerComponent implements OnInit {
     @Output()
     shifts: Shift[];
 
+    @Input()
+    zones: string[];
+
     constructor() {
         this.shifts = [];
     }
@@ -30,6 +33,10 @@ export class ShifContainerComponent implements OnInit {
      ngOnInit(): void {
         if (this.shifts == null) {
             this.shifts = [];
+        }
+
+        if(this.zones == null) {
+            this.zones = [];
         }
     }
 }

@@ -1,8 +1,8 @@
-<div dnd-droppable (onDropSuccess)="dropOn($event)">
+<div dnd-droppable (onDropSuccess)="dropOn($event)" [dropZones]="zones">
 
     <div *ngIf="!shifts || shifts.length == 0">Drop here</div>
     <div *ngFor="let shift of shifts">
-        <shift [data]="shift" (onDragged)="onDraggedShift()"></shift>
+        <shift [data]="shift" (onDragged)="onDraggedShift()" [dropZones]="zones"></shift>
     </div>
 
 </div>

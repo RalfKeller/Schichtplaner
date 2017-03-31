@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { Shift } from './../../Domain/Shift';
 
@@ -6,18 +6,29 @@ import { Shift } from './../../Domain/Shift';
     selector: 'shift',
     templateUrl: 'shift.component.html'
 })
-export class ShiftComponent {
-    
+export class ShiftComponent implements OnInit {
+
     @Input()
-    data:Shift;
+    data: Shift;
+
+    @Input()
+    dropZones: string[];
 
     @Output()
     onDragged = new EventEmitter<Shift>();
 
     constructor() { }
 
-    onDrag(){ 
+    onDrag() {
         this.onDragged.emit(this.data);
+    }
+
+     ngOnInit(): void {
+        if (this.dropZones == null) {
+            this.dropZones = [];
+        }
+
+        console.log(this.dropZones);
     }
 
 }
