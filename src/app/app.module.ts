@@ -1,3 +1,4 @@
+import { EmployeeDayComponent } from './EmployeesComponent/EmployeeDayComponent/employeeDay.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -35,7 +36,7 @@ import { ModalModule } from 'ng2-bs4-modal/ng2-bs4-modal';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path:'**', redirectTo:''},
+  {path: '**', redirectTo: ''},
 ];
 
 @NgModule({
@@ -46,6 +47,7 @@ const routes: Routes = [
     RegisterComponent,
     PlanerOverviewComponent,
     DashboardComponent,
+    EmployeeDayComponent,
     EmployeesComponent,
     NewEmployeeComponent,
     ShiftComponent,

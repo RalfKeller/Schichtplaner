@@ -1,4 +1,4 @@
-import { Component, Input, Output} from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 import { Shift } from './../../Domain/Shift';
 
@@ -7,23 +7,29 @@ import { Shift } from './../../Domain/Shift';
     selector: 'shiftcontainer',
     templateUrl: 'shiftcontainer.component.html'
 })
-export class ShifContainerComponent {
+export class ShifContainerComponent implements OnInit {
 
     @Input()
     @Output()
-    shifts:Shift[];
+    shifts: Shift[];
 
-    constructor() { 
+    constructor() {
         this.shifts = [];
     }
 
-    dropOn(event){
-        let newShift: Shift = event.dragData;
-        
+    dropOn(event) {
+        const newShift: Shift = event.dragData;
+
         this.shifts.push(newShift);
     }
 
-    onDraggedShift(draggedShift: Shift){
+    onDraggedShift(draggedShift: Shift) {
         this.shifts.splice(this.shifts.indexOf(draggedShift), 1);
+    }
+
+     ngOnInit(): void {
+        if (this.shifts == null) {
+            this.shifts = [];
+        }
     }
 }

@@ -15,10 +15,23 @@ export class EmployeeCommunicatorService {
 
     getEmployees(): Employee[] {
 
-        return [
-            { id: 1, name: "Ralf", maxCapacity: 30, currentCapacity: 20 },
-            { id: 2, name: "Stefan", maxCapacity: 20, currentCapacity: 10 }
-        ];
+        const ralf = new Employee();
+        const stefan = new Employee();
+        ralf.name = "Ralf";
+        ralf.currentCapacity = 20;
+        ralf.maxCapacity = 30;
+        ralf.id = 1;
+        ralf.shifts = {};
+        ralf.shifts['Montag'] = [{name:'Test', color:'Blue'}];
+
+        stefan.name = "Stefan";
+        stefan.currentCapacity = 20;
+        stefan.maxCapacity = 30;
+        stefan.id = 2;
+        stefan.shifts = {};
+        stefan.shifts['Montag'] = [{name:'Test', color:'Blue'}];
+
+        return [ralf, stefan];
     }
 
 }

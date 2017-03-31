@@ -40,50 +40,31 @@
                     </thead>
 
                     <tbody>
+
                         <tr>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            <td>Not assigned</td>
+                            
+                        </tr>
+                        <tr *ngFor="let employee of employees">
                             <td>
-                                <shiftcontainer [shifts]="shiftsA"></shiftcontainer>
+                                {{employee.name}}
                             </td>
-                            <td>{{shiftsA.length}}</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
+                            <td><employeeDay [data]="employee" day="Montag"></employeeDay></td>
+                            <td><employeeDay [data]="employee" day="Dienstag"></employeeDay></td>
+                            <td><employeeDay [data]="employee" day="Mittwoch"></employeeDay></td>
+                            <td><employeeDay [data]="employee" day="Donnerstag"></employeeDay></td>
+                            <td><employeeDay [data]="employee" day="Freitag"></employeeDay></td>
+                            <td><employeeDay [data]="employee" day="Samstag"></employeeDay></td>
+                            <td><employeeDay [data]="employee" day="Sonntag"></employeeDay></td>
                         </tr>
-                        <tr>
-                            <td>
-                                <shiftcontainer [shifts]="shiftsB"></shiftcontainer>
-                            </td>
-                            <td>{{shiftsB.length}}</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                        </tr>
-                        <tr>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                        </tr>
-                        <tr>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                            <td>Not assigned</td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>

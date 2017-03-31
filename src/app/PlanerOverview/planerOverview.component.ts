@@ -1,3 +1,5 @@
+import { EmployeeCommunicatorService } from '../Services/Communicators/employeeCommunicator.service';
+import { Employee } from '../Domain/Employee';
 import { Component, OnInit } from '@angular/core';
 import { ShiftComponent } from './ShiftComponent/shift.component';
 import { Shift } from './../Domain/Shift';
@@ -13,14 +15,10 @@ export class PlanerOverviewComponent  {
     shiftsA: Shift[];
     shiftsB: Shift[];
 
-    constructor() {
-        this.tShift = {
-            color: 'Blue',
-            name: 'Test'
-        }
+    employees: Employee[];
 
-        this.shiftsA= [this.tShift];
-        this.shiftsB = [];
+    constructor(private employeeSerice: EmployeeCommunicatorService) {
+
+        this.employees = employeeSerice.getEmployees();
      }
-
 }
